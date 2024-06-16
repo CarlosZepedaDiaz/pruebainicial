@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}Cómo Ayudar | Fundación Alivio{% endblock %}
+
+{% block content %}
+<h1>Cómo Ayudar</h1>
+<p>Hay muchas formas en las que puedes contribuir a nuestra causa:</p>
+<h2>Conoce más sobre nuestras iniciativas</h2>
+<div class="flyer-panel">
+    <div class="flyer">
+        <a href="/donaciones">
+            <img src="{{ url_for('static', filename='img/donaciones.jpg') }}" alt="Donaciones">
+            <div class="flyer-description">
+                <h3>Donaciones Monetarias</h3>
+                <p>Ayuda con aportes económicos que nos permiten seguir adelante.</p>
+            </div>
+        </a>
+    </div>
+    <div class="flyer">
+        <a href="/voluntariado">
+            <img src="{{ url_for('static', filename='img/voluntariado.jpg') }}" alt="Voluntariado">
+            <div class="flyer-description">
+                <h3>Voluntariado</h3>
+                <p>Únete a nuestro equipo y haz la diferencia en la comunidad.</p>
+            </div>
+        </a>
+    </div>
+    <div class="flyer">
+        <a href="/donacion_bienes">
+            <img src="{{ url_for('static', filename='img/donacion_bienes.jpg') }}" alt="Donación de Bienes">
+            <div class="flyer-description">
+                <h3>Donación de Bienes</h3>
+                <p>Contribuye con productos y servicios para nuestras actividades.</p>
+            </div>
+        </a>
+    </div>
+    <div class="flyer">
+        <a href="/promocion_redes">
+            <img src="{{ url_for('static', filename='img/promocion_redes.jpg') }}" alt="Promoción en Redes">
+            <div class="flyer-description">
+                <h3>Promoción en Redes Sociales</h3>
+                <p>Ayúdanos a difundir nuestra misión y llegar a más personas.</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+{% endblock %}
+

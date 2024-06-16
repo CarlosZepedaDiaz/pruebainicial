@@ -1,0 +1,213 @@
+body {
+    background-color: #f8f9fa; /* Fondo claro */
+    color: #333; /* Color de texto gris oscuro */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Sans-serif elegante */
+}
+
+/* Encabezados */
+h1, h2, h3 {
+    font-family: 'Georgia', serif; /* Serif elegante para encabezados */
+    color: #555; /* Color de texto gris medio para encabezados */
+}
+
+/* Barra de navegación */
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff; /* Color de los enlaces en la barra de navegación */
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: #e2e6ea; /* Color de los enlaces al pasar el cursor o estar activos */
+}
+
+.navbar {
+    background-color: #84CAC7; /* Color base del logotipo */
+    z-index: 1000; /* Asegura que la barra de navegación esté siempre por encima */
+    position: relative;
+}
+
+/* Jumbotron */
+.jumbotron {
+    background-color: #84CAC7; /* Color base del logotipo */
+    color: white;
+    width: 100%; /* Ocupa todo el espacio disponible */
+    max-width: 800px; /* Ancho máximo para centrar */
+    text-align: center;
+    margin: 0 auto; /* Centra el jumbotron horizontalmente */
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #84CAC7; /* Color de los botones */
+    border-color: #84CAC7;
+}
+
+.btn-primary:hover {
+    background-color: #73b8b5; /* Color de los botones al pasar el cursor */
+    border-color: #73b8b5;
+}
+
+/* Pie de página */
+.footer {
+    background-color: #84CAC7; /* Color base del logotipo */
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.footer .text-muted {
+    color: #e2e6ea;
+}
+
+/* Tarjetas de profesionales */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px; /* Espacio entre tarjetas */
+}
+
+.card-img-top {
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: #84CAC7;
+}
+
+/* Ancho de la tarjeta para que quepan 4 por fila en pantallas medianas y grandes */
+@media (min-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+/* Ancho de la tarjeta para que quepan 3 por fila en pantallas medianas */
+@media (min-width: 576px) and (max-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 33%;
+        max-width: 33%;
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 576px) {
+    .col-md-3, .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Imágenes laterales */
+.side-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 0; /* Asegura que las imágenes estén detrás del pie de página y la barra de navegación */
+}
+
+.side-images img {
+    width: 250px; /* Ajusta el tamaño de las imágenes según sea necesario */
+    margin-top: 100px; /* Ajusta este valor para bajar las imágenes */
+    margin-bottom: 20px;
+}
+
+/* Carrusel de novedades */
+.novedades {
+    margin-top: 50px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner .novedad {
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel-inner .novedad h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.carousel-inner .novedad p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Contenedor principal */
+.main-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 150px; /* Espacio suficiente para las imágenes laterales */
+    box-sizing: border-box;
+    z-index: 1; /* Asegura que el contenido principal esté por encima de las imágenes laterales */
+}
+
+/* Estilos para el panel de flyers */
+.flyer-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.flyer {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(25% - 20px); /* Ajusta el ancho según sea necesario */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.flyer:hover {
+    transform: scale(1.05);
+}
+
+.flyer img {
+    width: 100%;
+    height: auto;
+}
+
+.flyer-description {
+    padding: 10px;
+}
+
+.flyer-description h3 {
+    margin: 10px 0;
+}
+
+.flyer-description p {
+    margin: 0;
+    color: #666;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .flyer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .flyer {
+        width: 100%;
+    }
+}
+
+
+

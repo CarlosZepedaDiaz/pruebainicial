@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}Inicio | Fundación Alivio{% endblock %}
+
+{% block content %}
+<!-- Fotografías en los costados -->
+<div class="side-images d-none d-lg-flex flex-column align-items-center" style="left: 0;">
+    <img src="{{ url_for('static', filename='img/photo1.jpg') }}" alt="Image 1" class="side-image">
+</div>
+<div class="side-images d-none d-lg-flex flex-column align-items-center" style="right: 0;">
+    <img src="{{ url_for('static', filename='img/photo2.jpg') }}" alt="Image 2" class="side-image">
+</div>
+
+<div class="main-content d-flex justify-content-center align-items-center">
+    <div class="jumbotron flex-grow-1 mx-lg-3">
+        <h1 class="display-5">Bienvenidos a Fundación Alivio</h1>
+        <p class="lead">Nuestra misión es ayudar a los más necesitados en Chile.</p>
+        <hr class="my-3">
+        <p>Conoce más sobre nuestro trabajo y cómo puedes ayudar.</p>
+        <a class="btn btn-primary btn-lg" href="/equipo" role="button">Acerca de Nosotros</a>
+        <a class="btn btn-secondary btn-lg" href="/contact" role="button">Contacto</a>
+    </div>
+</div>
+
+<!-- Carrusel de noticias -->
+<section class="novedades mt-5">
+    <div id="newsCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            {% for novedad in novedades %}
+            <div class="carousel-item {% if loop.first %}active{% endif %}">
+                <div class="novedad">
+                    <h3>{{ novedad.titulo }}</h3>
+                    <p>{{ novedad.descripcion }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <a class="carousel-control-prev" href="#newsCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#newsCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+</section>
+{% endblock %}
+
